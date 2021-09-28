@@ -39,4 +39,28 @@ const create = async (req, res) => {
     }
 };
 
-module.exports = { getAllDistrict, create };
+const getDistrictById = async (req, res) => {
+    try {
+        const singleDistrict = await model.District.findAll({
+            where: {
+                id: req.params.id,
+            },
+        });
+
+        if (singleDistrict) {
+            res.status(200).json({
+                data: singleDistrict,
+            });
+        } else {
+            res.status(200).json({
+                message: "sorry, no data found",
+            });
+        }
+    } catch (err) {
+        res.status(500).json({
+            error: "internal server error " + err,
+        });
+    }
+}
+
+module.exports = { getAllDistrict, create, getDistrictById };
