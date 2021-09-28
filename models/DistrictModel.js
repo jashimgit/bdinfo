@@ -21,6 +21,8 @@ const District = sequelize.define('District', {
     dist_url: {
         type: DataTypes.STRING,
     },
+}, {
+    tableName: 'districts'
 });
 
 module.exports = District;

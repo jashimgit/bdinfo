@@ -1,3 +1,4 @@
+const { sequelize } = require('../DbManager/DB');
 const Division = require('./DivisionModel');
 const District = require('./DistrictModel');
 const Upazila = require('./UpazilaModel');

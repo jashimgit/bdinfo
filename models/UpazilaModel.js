@@ -14,6 +14,8 @@ const Upazila = sequelize.define('Upazila', {
     up_url: {
         type: DataTypes.STRING
     },
+}, {
+    tableName: 'upazilas'
 })
 
 module.exports = Upazila;

@@ -14,6 +14,8 @@ const Union = sequelize.define('Union', {
     un_url: {
         type: DataTypes.STRING
     }
+}, {
+    tableName: 'unions'
 })
 
 module.exports = Union;

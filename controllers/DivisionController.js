@@ -3,6 +3,7 @@ const { Sequelize, Model } = require('sequelize');
 // const {getAll} = require('../lib/dbQuery');
 
 const create = async (req, res) => {
+    // console.log(req.body)
     try {
         const response = await model.Division.create(req.body);
         if (response) {
@@ -26,6 +27,10 @@ const getAllDivision = async (req, res) => {
         const data = await model.Division.findAll({
             include: model.District
         });
+
+        // db query function 
+
+        
     
         if (data.length > 0) {
             res.status(200).json({

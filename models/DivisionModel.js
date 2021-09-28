@@ -12,6 +12,8 @@ const Division = sequelize.define('Division', {
     div_url: {
         type: DataTypes.STRING,
     },
+}, {
+    tableName: 'divisions'
 });
 
 module.exports = Division;
