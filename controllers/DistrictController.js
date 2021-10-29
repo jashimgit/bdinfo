@@ -49,7 +49,7 @@ const getDistrictById = async (req, res) => {
 
         if (singleDistrict) {
             res.status(200).json({
-                data: singleDistrict,
+                district: singleDistrict,
             });
         } else {
             res.status(200).json({

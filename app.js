@@ -15,6 +15,7 @@ const port = process.env.PORT || 8000;
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.set('view engine', 'ejs');
 
 // division routes
 app.use("/division", divisionRoutes);
@@ -30,6 +31,9 @@ app.use("/upazila", upazilaRoutes);
 
 app.use("/union", unionRoutes);
 
+// get all division, district, upzila, union count
+
+
 // async function connect() {
 //     try {
 //         await db.authenticate();
@@ -41,7 +45,7 @@ app.use("/union", unionRoutes);
 // connect();
 
 app.get("/", (req, res) => {
-    res.send("<h2> welcome to dev server </h2>");
+    res.render('index')
 });
 
 // create server

@@ -1,7 +1,5 @@
 const model = require('../models');
 
-// getAllUnion,
-    // addNewUnion
 
 
     const getAllUnion = async (req, res ) => {
