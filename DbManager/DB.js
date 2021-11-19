@@ -13,12 +13,12 @@ const sequelize = new Sequelize(process.env.DBNAME, process.env.DBUSER, process.
 
 // live server connection
 /*
-const sequelize = new Sequelize('thsender_bdinfo, 'thsender_bdinfo', 'mist011he762', {
+const sequelize = new Sequelize(process.env.DBNAMELIVE, process.env.DBUSERLIVE, process.env.DBUSERLIVE, {
     host: 'localhost',
     dialect: 'mysql',
 });
-
 */
+
 
 (async () => {
     await sequelize.sync()
